@@ -36,31 +36,31 @@ public class Plant implements Serializable {
   @Column(name = "saved", nullable = false)
   private Boolean saved;
   @Column(name = "scientifist_name", nullable = false, length = 100)
-  private String scientifist_name;
+  private String scientifistName;
   @Column(name = "variety", nullable = false, length = 100)
   private String variety;
   @Column(name = "info_land_type", nullable = false, length = 1000)
-  private String info_land_type;
+  private String infoLandType;
   @Column(name = "ph", nullable = false)
   private Float ph;
   @Column(name = "info_distance_between", nullable = false, length = 1000)
-  private String info_distance_between;
+  private String infoDistanceBetween;
   @Column(name = "distance_between", nullable = false)
-  private String distance_between;
+  private String distanceBetween;
   @Column(name = "info_ideal_depth", nullable = false, length = 1000)
-  private String info_ideal_depth;
+  private String infoIdealDepth;
   @Column(name = "depth", nullable = false)
   private String depth;
   @Column(name = "info_weather_conditions", nullable = false, length = 1000)
-  private String info_weather_conditions;
+  private String infoWeatherConditions;
   @Column(name = "weather", nullable = false)
   private String weather;
   @Column(name = "info_fert_fumig", nullable = false, length = 1000)
-  private String info_fert_fumig;
+  private String infoFertFumig;
   @Column(name = "intervale_fert", nullable = false)
-  private Integer intervale_fert;
+  private Integer intervaleFert;
   @Column(name = "intervale_fumig", nullable = false)
-  private Integer intervale_fumig;
+  private Integer intervaleFumig;
   @JsonIgnore
   @ManyToMany(mappedBy = "plants", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
   private List<User> users;
