@@ -2,7 +2,7 @@ package com.agripure.agripurebackend.controller;
 
 import com.agripure.agripurebackend.entities.Plot;
 import com.agripure.agripurebackend.entities.User;
-import com.agripure.agripurebackend.service.IPlotService;
+import com.agripure.agripurebackend.service.IplotService;
 import com.agripure.agripurebackend.service.IuserService;
 import io.swagger.annotations.Api;
 import java.util.List;
@@ -28,10 +28,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/plots")
 @Api(tags = "Plots", value = "Web Service RESTful - Plots")
 public class PlotController {
-  private IPlotService plotService;
+  private IplotService plotService;
   private IuserService userService;
   
-  public PlotController(IPlotService plotService, IuserService userService) {
+  public PlotController(IplotService plotService, IuserService userService) {
     this.plotService = plotService;
     this.userService = userService;
   }
