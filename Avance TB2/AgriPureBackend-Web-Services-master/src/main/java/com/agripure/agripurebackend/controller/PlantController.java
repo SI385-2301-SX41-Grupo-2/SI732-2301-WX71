@@ -61,8 +61,8 @@ public class PlantController {
     }
   }
 
-    @GetMapping(value = "/searchByName/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
-    @ApiOperation(value = "Found plant by Name", notes = "Method for list one plant by Id")
+  @GetMapping(value = "/searchByName/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
+  @ApiOperation(value = "Found plant by Name", notes = "Method for list one plant by Id")
     public ResponseEntity<Plant> findPlantsByName(@PathVariable("name") String name){
         try{
             Plant plant = plantService.findByName(name);
